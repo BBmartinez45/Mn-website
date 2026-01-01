@@ -1,13 +1,14 @@
 /* Calm Nerve — Mobile-first premium styles */
 :root{
-  /* Calm premium palette */
-  --bg: #f9fafb;          /* light neutral background */
+  /* Calm premium palette (modernized) */
+  --bg: linear-gradient(180deg,#f6f8fb 0%, #eef3f8 100%);
   --surface: #ffffff;     /* white cards */
-  --text: #1f2933;        /* dark readable text */
+  --text: #0f1724;        /* deeper, more modern text */
   --muted: #6b7280;       /* muted secondary text */
-  --accent: #2563eb;      /* calm blue accent for CTAs */
-  --accent-soft: #e0e7ff; /* soft accent background */
-  --border: #e5e7eb;      /* subtle borders */
+  --accent: #0b63ff;      /* brighter blue accent for CTAs */
+  --accent-2: #0b9eff;    /* secondary accent for subtle highlights */
+  --accent-soft: rgba(11,99,255,0.08); /* soft accent background */
+  --border: #e6eef9;      /* subtle cool border */
   --radius: 12px;
   --shadow-1: 0 12px 36px rgba(15, 23, 42, 0.06);
   --shadow-2: 0 6px 20px rgba(15, 23, 42, 0.04);
@@ -18,7 +19,9 @@
 .html,body{height:100%}
 /* Strong defensive rules to avoid horizontal scrolling on mobile */
 html,body{overflow-x:hidden;max-width:100vw;overscroll-behavior-x:none}
-body{margin:0;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;font-size:18px;min-width:0;word-break:break-word;hyphens:auto;-webkit-text-size-adjust:100%}
+/* page background wrapper */
+body{margin:0;color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;font-size:18px;min-width:0;word-break:break-word;hyphens:auto;-webkit-text-size-adjust:100%}
+.site-wrapper{background:var(--bg)}
 .container{max-width:var(--max-width);margin:0 auto;padding:0 18px;box-sizing:border-box;width:100%;max-width:100%}
 
 /* Respect safe area insets on iOS devices */
@@ -28,24 +31,29 @@ body{margin:0;background:var(--bg);color:var(--text);line-height:1.6;-webkit-fon
 img, svg{max-width:100%;height:auto;display:block}
 
 /* Header */
-.site-header{position:sticky;top:0;z-index:40;background:var(--surface);border-bottom:1px solid var(--border)}
-.header-inner{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.brand .logo{height:44px}
+.site-header{position:sticky;top:0;z-index:60;background:transparent;padding:12px 0}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;background:rgba(255,255,255,0.6);backdrop-filter:blur(6px);padding:10px 14px;border-radius:14px;box-shadow:var(--shadow-2)}
+/* ----------------------
+   Design Enhancements
+   Appended: larger type, hero backdrop, CTA polish, inputs, focus states
+   ---------------------- */
+
+.brand .logo{height:48px}
 .nav-right{display:flex;align-items:center;gap:12px}
-.nav-link{color:var(--muted);text-decoration:none;font-weight:600}
+.nav-link{color:var(--text);text-decoration:none;font-weight:700;padding:8px}
 
 /* Buttons */
-.btn{display:inline-block;padding:12px 16px;border-radius:10px;border:1px solid transparent;background:transparent;color:var(--accent);text-decoration:none;cursor:pointer;transition:transform .12s ease,box-shadow .12s ease;font-weight:700}
-.btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-2)}
-.btn-primary{background:var(--accent);color:white;border-color:var(--accent);box-shadow:none}
-.btn-ghost{background:transparent;color:var(--accent);border-color:var(--border)}
+.btn{display:inline-block;padding:12px 18px;border-radius:12px;border:1px solid transparent;background:transparent;color:var(--accent);text-decoration:none;cursor:pointer;transition:transform .12s ease,box-shadow .12s ease,font-weight .12s ease;font-weight:700}
+.btn:hover{transform:translateY(-3px);box-shadow:var(--shadow-2)}
+.btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;border-color:transparent;box-shadow:0 8px 28px rgba(11,99,255,0.12)}
+.btn-ghost{background:transparent;color:var(--text);border-color:transparent}
 .fullwidth{width:100%}
 
 /* Hero (mobile-first) */
-.hero{padding:28px 0}
-.hero-card{display:flex;flex-direction:column;gap:18px;align-items:stretch;background:transparent;flex-wrap:wrap}
-.hero-content{padding:6px}
-.hero h1{font-size:1.5rem;font-weight:800;line-height:1.02;margin:0}
+.hero{padding:36px 0}
+.hero-card{display:flex;flex-direction:column;gap:22px;align-items:stretch;background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.9));padding:18px;border-radius:18px;box-shadow:var(--shadow-1);}
+.hero-content{padding:8px}
+.hero h1{font-size:clamp(1.6rem,2.4vw,2.8rem);font-weight:900;line-height:1.02;margin:0;color:var(--text)}
 .hero-sub{color:var(--accent);margin-top:8px;font-weight:700}
 .lead{font-size:1.02rem;color:var(--muted);margin-top:10px}
 .hero-ctas{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
@@ -56,14 +64,14 @@ img, svg{max-width:100%;height:auto;display:block}
 /* Calm / Credibility */
 .section{padding:28px 0}
 .section--calm .calm-grid{display:flex;flex-direction:column;gap:12px}
-.card.small{background:var(--surface);padding:14px;border-radius:10px;box-shadow:var(--shadow-2);text-align:center;border:1px solid var(--border)}
+.card.small{background:linear-gradient(180deg,#ffffff, #fbfdff);padding:16px;border-radius:12px;box-shadow:var(--shadow-2);text-align:center;border:1px solid var(--border)}
 
 /* What Is */
 .feature-list{list-style:disc;margin-left:22px;padding-left:6px;margin-top:12px}
 
 /* Ingredients grid (mobile-first stacked) */
 .ingredients-grid{display:grid;grid-template-columns:repeat(1,minmax(0,1fr));gap:12px;margin-top:12px}
-.ingredient{background:var(--surface);padding:14px;border-radius:10px;box-shadow:var(--shadow-2);border:1px solid var(--border)}
+.ingredient{background:#ffffff;padding:16px;border-radius:12px;box-shadow:var(--shadow-2);border:1px solid var(--border)}
 .ingredient strong{display:block;margin-bottom:6px}
 
 /* Benefits */
@@ -76,12 +84,22 @@ img, svg{max-width:100%;height:auto;display:block}
 
 /* How it works */
 .how-steps{display:grid;grid-template-columns:repeat(1,minmax(0,1fr));gap:12px;margin-top:12px}
-.how-step{background:var(--surface);padding:16px;border-radius:10px;box-shadow:var(--shadow-2);border:1px solid var(--border);min-width:0}
+.how-step{background:#fff;padding:18px;border-radius:12px;box-shadow:var(--shadow-2);border:1px solid var(--border);min-width:0}
 .step-number{width:36px;height:36px;border-radius:50%;background:var(--accent);color:white;display:inline-flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:10px}
 
 /* Testimonials */
 .testimonials{display:grid;grid-template-columns:repeat(1,minmax(0,1fr));gap:12px;margin-top:12px}
-.testimonial img{width:100%;height:auto;border-radius:10px;box-shadow:var(--shadow-2);display:block}
+.testimonial img{width:100%;height:auto;border-radius:12px;box-shadow:var(--shadow-2);display:block}
+
+/* Make testimonial cards more prominent and text within SVGs easier to read */
+.testimonials .testimonial{background:var(--surface);padding:14px;border-radius:12px;box-shadow:var(--shadow-2);display:flex;align-items:center;justify-content:center;min-height:160px}
+.testimonials .testimonial img{max-height:220px;object-fit:contain}
+
+@media (min-width:768px){
+  .testimonials{grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+  .testimonials .testimonial{min-height:220px;padding:18px}
+  .testimonials .testimonial img{max-height:320px}
+}
 
 /* Accordion (FAQ) */
 .faq-list{max-width:900px}
@@ -95,23 +113,23 @@ img, svg{max-width:100%;height:auto;display:block}
 
 /* Form checkbox alignment */
 .checkbox{display:inline-flex;align-items:center;gap:10px;color:var(--text);font-size:15px}
-.checkbox input[type="checkbox"]{width:18px;height:18px;margin:0;flex:0 0 auto}
+.checkbox input[type="checkbox"]{width:20px;height:20px;margin:0;flex:0 0 auto}
 
 /* Final CTA */
-.section-cta{background:var(--surface);padding:22px 0;border-top:1px solid var(--border)}
-.cta-grid{display:grid;grid-template-columns:1fr;gap:12px;align-items:center}
-.input-row{display:flex;flex-direction:column;gap:8px;min-width:0}
-.input-row input{padding:14px;border-radius:10px;border:1px solid var(--border);width:100%;font-size:16px;min-width:0}
+.section-cta{background:linear-gradient(180deg, rgba(11,99,255,0.04), rgba(255,255,255,0.6));padding:28px 0;border-top:1px solid rgba(11,99,255,0.06)}
+.cta-grid{display:grid;grid-template-columns:1fr;gap:16px;align-items:center}
+.input-row{display:flex;flex-direction:column;gap:10px;min-width:0}
+.input-row input{padding:14px;border-radius:12px;border:1px solid var(--border);width:100%;font-size:16px;min-width:0}
 
 /* Make sure flex items can shrink to avoid forcing horizontal scroll */
 .hero-card, .header-inner, .footer-grid, .calm-grid{min-width:0}
 .hero-content, .hero-media{min-width:0}
 
 /* Use auto-fit for grids at larger sizes to avoid fixed column widths */
-@media (min-width:720px){
-  .ingredients-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
-  .how-steps{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
-  .testimonials{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+@media (min-width:768px){
+  .ingredients-grid{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .how-steps{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .testimonials{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
 }
 .fineprint{font-size:.9rem;color:var(--muted);margin:8px 0 0}
 
@@ -129,7 +147,7 @@ img, svg{max-width:100%;height:auto;display:block}
 }
 
 /* Small tablets / large phones */
-@media (min-width:600px){
+@media (min-width:640px){
   .container{padding:22px}
   .hero-card{flex-direction:row;align-items:center;gap:20px}
   .hero-content{flex:1;min-width:320px}
@@ -139,14 +157,14 @@ img, svg{max-width:100%;height:auto;display:block}
 }
 
 /* Standard tablet and small laptop */
-@media (min-width:720px){
+@media (min-width:768px){
   .container{padding:28px}
   .hero-card{align-items:center;justify-content:space-between}
   .hero-ctas{justify-content:flex-start}
-  .ingredients-grid{grid-template-columns:repeat(3,1fr)}
-  .how-steps{grid-template-columns:repeat(3,1fr)}
-  .testimonials{grid-template-columns:repeat(3,1fr)}
-  .cta-grid{grid-template-columns:1fr 420px}
+  .ingredients-grid{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .how-steps{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .testimonials{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .cta-grid{grid-template-columns:1fr minmax(320px,420px)}
   .footer-grid{flex-direction:row;align-items:center;justify-content:space-between}
 }
 
@@ -185,3 +203,38 @@ img, svg{max-width:100%;height:auto;display:block}
   .btn{padding:14px 18px;border-radius:12px}
   .nav-link{padding:8px}
 }
+
+/* MailerLite embed visual overrides to match the site */
+/* Targets the specific embed container ID added to the page */
+#mlb2-35189939.ml-form-embedContainer {
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--text);
+}
+#mlb2-35189939 .ml-form-embedWrapper { background: transparent; box-shadow: none; border-radius: 12px; }
+#mlb2-35189939 .ml-form-embedContent h4 {
+  font-size: 1.25rem; /* match hero sizing scale */
+  font-weight: 800;
+  color: var(--text);
+  margin: 0 0 6px 0;
+}
+#mlb2-35189939 .ml-form-embedContent p { color: var(--muted); margin: 0 0 12px 0; }
+#mlb2-35189939 input.form-control, #mlb2-35189939 .ml-form-embedBody input {
+  border-radius: 10px; border: 1px solid var(--border); padding: 12px; font-size:16px; box-shadow:none;
+}
+#mlb2-35189939 .ml-form-embedSubmit button,
+#mlb2-35189939 .ml-form-horizontalRow button {
+  background: var(--accent) !important; color: #fff !important; border-radius: 10px !important; padding: 12px 16px !important; font-weight:700 !important; border: none !important;
+}
+#mlb2-35189939 .ml-form-embedSubmit button:hover { background: #1748c6 !important; }
+#mlb2-35189939 .ml-form-embedBody { padding: 18px !important; background: var(--surface); border-radius: 12px; border: 1px solid var(--border); }
+#mlb2-35189939 .ml-form-successBody .ml-form-successContent h4 { color: var(--accent); font-weight:800 }
+#mlb2-35189939 .ml-form-embedBody .ml-form-checkboxRow label { padding-left: 28px; }
+
+/* Make embed responsive within our CTA column */
+@media (min-width:768px){
+  #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper.embedForm { max-width: 420px; }
+}
+
+/* Ensure inputs and button expand to full width on mobile */
+#mlb2-35189939 input.form-control, #mlb2-35189939 .ml-form-embedSubmit button { width: 100% !important; display:block }
+
