@@ -1,809 +1,1123 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Calm Nerve — Early Access</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <img src="cropped-logo.png" alt="Calm Nerve logo" class="logo" />
-      </div>
-      <nav class="nav-right" aria-label="Primary">
-        <a class="nav-link" href="#how-it-works">How it works</a>
-        <a class="btn btn-primary small" href="#final-cta">Join Early Access</a>
-      </nav>
-    </div>
-  </header>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>welcome to upPlan</title>
 
-  <main>
-    
-    <section class="hero" id="hero">
-      <div class="container">
-        <div class="hero-card">
-          <div class="hero-content">
-            <h1>End Tingling, Burning & Numbness — Naturally.</h1>
-            <p class="hero-sub">Be the First to Try Calm Nerve When It Launches!</p>
-            <p class="lead">A breakthrough nerve support supplement designed to help you feel your feet and hands again — safely and naturally.</p>
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-            <div class="hero-ctas">
-              <a class="btn btn-primary" href="#final-cta">Yes, notify me at launch</a>
-              <a class="btn btn-ghost" href="#how-it-works">How it works</a>
-            </div>
-          </div>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Tailwind config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            '50': '#e6f8f9',
+                            '100': '#b8eff1',
+                            '200': '#7fe1e5',
+                            '300': '#4dd1d5',
+                            '400': '#24bcc5',
+                            '500': '#1f9a9f',
+                            '600': '#1a7a7e',
+                            '700': '#145a5f',
+                            '800': '#0d3d41',
+                        },
+                        accent: {
+                            '400': '#ff8c6b',
+                            '500': '#ff6b4a',
+                            '600': '#e8522a',
+                        },
+                        dark: '#0a0e14',
+                        white: '#fff',
+                    },
+                    boxShadow: {
+                        'soft-sm': '0 2px 4px rgba(10, 14, 20, 0.08)',
+                        'soft-md': '0 4px 8px rgba(10, 14, 20, 0.1)',
+                        'soft-lg': '0 8px 16px rgba(10, 14, 20, 0.12)',
+                        'soft-xl': '0 16px 32px rgba(10, 14, 20, 0.16)',
+                        'soft-2xl': '0 24px 48px rgba(10, 14, 20, 0.2)',
+                    },
+                    borderRadius: {
+                        'sm': '6px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                    },
+                    animation: {
+                        marquee: 'marquee 50s linear infinite',
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': { transform: 'translateX(0)' },
+                            '100%': { transform: 'translateX(-50%)' },
+                        },
+                    },
+                    transitionTimingFunction: {
+                        'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',
+                    },
+                },
+            },
+        }
+    </script>
 
-          <div class="hero-media">
-            <img src="calm%20nerve.jpeg" alt="Calm Nerve bottle" class="product-image">
-            <div class="hero-note">10% off for early signups · Priority shipping</div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    
-    <section class="section section--calm">
-      <div class="container">
-        <div class="calm-grid">
-          <div>
-            <h3>Neuropathy affects millions — but relief is possible.</h3>
-            <p class="muted">Calm Nerve combines 9 powerful ingredients shown to support nerve repair, reduce inflammation, and improve comfort.</p>
-          </div>
-          <div class="card small">Made in a GMP-certified facility<br>Third-party tested</div>
-        </div>
-      </div>
-    </section>
 
-    
-    <section class="section" id="what-is">
-      <div class="container">
-        <h3>What Is Calm Nerve?</h3>
-        <p>Calm Nerve is a science-inspired nerve support formula created to help people who struggle with:</p>
-        <ul class="feature-list">
-          <li>Tingling feet or hands</li>
-          <li>Burning sensations</li>
-          <li>Numbness or loss of feeling</li>
-          <li>Diabetic nerve pain</li>
-          <li>Poor circulation</li>
-          <li>Leg or foot discomfort</li>
-        </ul>
-      </div>
-    </section>
+    <style>
+        :root {
+            --primary-600: #1f9a9f;
+            --primary-500: #24bcc5;
+        }
 
-    
-    <section class="section alt" id="ingredients">
-      <div class="container">
-        <h3>What Makes Calm Nerve Different?</h3>
-        <p class="muted">Clinically studied, well-tolerated ingredients that target inflammation, oxidation, and nerve repair.</p>
-
-        <div class="ingredients-grid">
-          <div class="ingredient">
-            <strong>Benfotiamine</strong>
-            <div class="muted">Supports healthy nerve regeneration</div>
-          </div>
-          <div class="ingredient">
-            <strong>Alpha-Lipoic Acid (ALA)</strong>
-            <div class="muted">Reduces oxidative stress linked to nerve damage</div>
-          </div>
-          <div class="ingredient">
-            <strong>Methylcobalamin (B12)</strong>
-            <div class="muted">Essential for nerve sheath repair</div>
-          </div>
-          <div class="ingredient">
-            <strong>Acetyl-L-Carnitine</strong>
-            <div class="muted">Supports healthy nerve communication</div>
-          </div>
-          <div class="ingredient">
-            <strong>Lion’s Mane</strong>
-            <div class="muted">Stimulates nerve growth factor (NGF)</div>
-          </div>
-          <div class="ingredient">
-            <strong>Magnesium L-Threonate</strong>
-            <div class="muted">Supports nerve signaling</div>
-          </div>
-          <div class="ingredient">
-            <strong>Turmeric • Boswellia • Ashwagandha</strong>
-            <div class="muted">Reduce inflammation that worsens nerve pain</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    
-    <section class="section">
-      <div class="container">
-        <h3>Early Access Benefits</h3>
-        <ul class="benefits">
-          <li><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" /></svg> 10% Off Your First Bottle</li>
-          <li><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" /></svg> Priority Shipping Before Public Release</li>
-          <li><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" /></svg> Founders‑Only Launch Bonuses</li>
-        </ul>
-      </div>
-    </section>
-
-    
-    <section class="section alt" id="how-it-works">
-      <div class="container">
-        <h3>How Calm Nerve Works</h3>
-        <div class="how-steps">
-          <div class="how-step">
-            <div class="step-number">1</div>
-            <h4>Reduce nerve stress & inflammation</h4>
-            <p class="muted">ALA, Turmeric, Boswellia, Ashwagandha</p>
-          </div>
-          <div class="how-step">
-            <div class="step-number">2</div>
-            <h4>Nourish, repair & protect the nerves</h4>
-            <p class="muted">Benfotiamine, Methyl B12, ALCAR, Lion’s Mane</p>
-          </div>
-          <div class="how-step">
-            <div class="step-number">3</div>
-            <h4>Improve nerve communication & circulation</h4>
-            <p class="muted">Magnesium L-Threonate, ALA, Lion’s Mane</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    
-    <section class="section">
-      <div class="container">
-        <h3>What early testers say</h3>
-        <div class="testimonials">
-          <div class="testimonial">
-            <blockquote>
-              <p>“Within a few weeks I noticed less numbness and more comfort in my feet.”</p>
-              <cite>— T.M., Early tester</cite>
-            </blockquote>
-          </div>
-          <div class="testimonial">
-            <blockquote>
-              <p>“Finally something that helps me sleep through the night without constant tingling.”</p>
-              <cite>— J.O., Early tester</cite>
-            </blockquote>
-          </div>
-          <div class="testimonial">
-            <blockquote>
-              <p>“I appreciate the natural formula — my hands feel clearer and steadier.”</p>
-              <cite>— R.S., Early tester</cite>
-            </blockquote>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    
-    <section class="section alt" aria-labelledby="faq-heading">
-      <div class="container">
-        <h3 id="faq-heading">FAQ</h3>
-        <div class="faq-list">
-          <details class="faq-item">
-            <summary class="faq-question">When is the official launch?</summary>
-            <div class="faq-answer">We expect to ship early orders in the next few weeks.</div>
-          </details>
-
-          <details class="faq-item">
-            <summary class="faq-question">Is Calm Nerve safe?</summary>
-            <div class="faq-answer">It’s made in a GMP-certified facility using natural ingredients with strong scientific support. Consult your doctor if you have concerns.</div>
-          </details>
-
-          <details class="faq-item">
-            <summary class="faq-question">Who should not take Calm Nerve?</summary>
-            <div class="faq-answer">Anyone on medication or who is pregnant should consult their doctor before taking new supplements.</div>
-          </details>
-
-          <details class="faq-item">
-            <summary class="faq-question">What will the price be?</summary>
-            <div class="faq-answer">The early access price will be $39, with exclusive discounts for early signups.</div>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    
-    <section class="section section-cta" id="final-cta">
-      <div class="container">
-        <div class="cta-grid">
-          <div>
-            <h3>Be the First to Try Calm Nerve</h3>
-            <p class="muted">Launch is happening soon — join the list now and save.</p>
-          </div>
-          <div>
-            <!-- MailerLite embedded form -->
-            <style type="text/css">@import url("https://assets.mlcdn.com/fonts.css?version=1766132");</style>
-    <style type="text/css">
-    /* LOADER */
-    .ml-form-embedSubmitLoad {
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-    }
-
-  .g-recaptcha {
-  transform: scale(1);
-  -webkit-transform: scale(1);
-  transform-origin: 0 0;
-  -webkit-transform-origin: 0 0;
-  }
-
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0,0,0,0);
-      border: 0;
-    }
-
-    .ml-form-embedSubmitLoad:after {
-      content: " ";
-      display: block;
-      width: 11px;
-      height: 11px;
-      margin: 1px;
-      border-radius: 50%;
-      border: 4px solid #fff;
-    border-color: #ffffff #ffffff #ffffff transparent;
-    animation: ml-form-embedSubmitLoad 1.2s linear infinite;
-    }
-    @keyframes ml-form-embedSubmitLoad {
-      0% {
-      transform: rotate(0deg);
-      }
-      100% {
-      transform: rotate(360deg);
-      }
-    }
-      #mlb2-35189939.ml-form-embedContainer {
-        box-sizing: border-box;
-        display: table;
-        margin: 0 auto;
-        position: static;
-        width: 100% !important;
-      }
-      #mlb2-35189939.ml-form-embedContainer h4,
-      #mlb2-35189939.ml-form-embedContainer p,
-      #mlb2-35189939.ml-form-embedContainer span,
-      #mlb2-35189939.ml-form-embedContainer button {
-        text-transform: none !important;
-        letter-spacing: normal !important;
-      }
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper {
-        background-color: #f6f6f6;
-        
-        border-width: 0px;
-        border-color: transparent;
-        border-radius: 4px;
-        border-style: solid;
-        box-sizing: border-box;
-        display: inline-block !important;
-        margin: 0;
-        padding: 0;
-        position: relative;
-              }
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper.embedPopup,
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper.embedDefault { width: 400px; }
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper.embedForm { max-width: 400px; width: 100%; }
-      #mlb2-35189939.ml-form-embedContainer .ml-form-align-left { text-align: left; }
-      #mlb2-35189939.ml-form-embedContainer .ml-form-align-center { text-align: center; }
-      #mlb2-35189939.ml-form-embedContainer .ml-form-align-default { display: table-cell !important; vertical-align: middle !important; text-align: center !important; }
-      #mlb2-35189939.ml-form-embedContainer .ml-form-align-right { text-align: right; }
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedHeader img {
-        border-top-left-radius: 4px;
-        border-top-right-radius: 4px;
-        height: auto;
-        margin: 0 auto !important;
-        max-width: 100%;
-        width: undefinedpx;
-      }
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody,
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody {
-        padding: 20px 20px 0 20px;
-      }
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody.ml-form-embedBodyHorizontal {
-        padding-bottom: 0;
-      }
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent,
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent {
-        text-align: left;
-        margin: 0 0 20px 0;
-      }
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent h4,
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent h4 {
-        color: #000000;
-        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-        font-size: 30px;
-        font-weight: 400;
-        margin: 0 0 10px 0;
-        text-align: left;
-        word-break: break-word;
-      }
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p,
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p {
-        color: #000000;
-        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 20px;
-        margin: 0 0 10px 0;
-        text-align: left;
-      }
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ul,
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ol,
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ul,
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ol {
-        color: #000000;
-        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-        font-size: 14px;
-      }
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ol ol,
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ol ol {
-        list-style-type: lower-alpha;
-      }
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ol ol ol,
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ol ol ol {
-        list-style-type: lower-roman;
-      }
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p a,
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p a {
-        color: #000000;
-        text-decoration: underline;
-      }
-
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-block-form .ml-field-group {
-        text-align: left!important;
-      }
-
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-block-form .ml-field-group label {
-        margin-bottom: 5px;
-        color: #333333;
-        font-size: 14px;
-        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-        font-weight: bold; font-style: normal; text-decoration: none;;
-        display: inline-block;
-        line-height: 20px;
-      }
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p:last-child,
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p:last-child {
-        margin: 0;
-      }
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody form {
-        margin: 0;
-        width: 100%;
-      }
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent,
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow {
-        margin: 0 0 20px 0;
-        width: 100%;
-      }
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow {
-        float: left;
-      }
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent.horozintalForm {
-        margin: 0;
-        padding: 0 0 20px 0;
-        width: 100%;
-        height: auto;
-        float: left;
-      }
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow {
-        margin: 0 0 10px 0;
-        width: 100%;
-      }
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow.ml-last-item {
-        margin: 0;
-      }
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow.ml-formfieldHorizintal {
-        margin: 0;
-      }
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input {
-        background-color: #ffffff !important;
-        color: #333333 !important;
-        border-color: #cccccc;
-        border-radius: 4px !important;
-        border-style: solid !important;
-        border-width: 1px !important;
-        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-        font-size: 14px !important;
-        height: auto;
-        line-height: 21px !important;
-        margin-bottom: 0;
-        margin-top: 0;
-        margin-left: 0;
-        margin-right: 0;
-        padding: 10px 10px !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-        max-width: 100% !important;
-      }
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input::-webkit-input-placeholder,
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input::-webkit-input-placeholder { color: #333333; }
-
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input::-moz-placeholder,
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input::-moz-placeholder { color: #333333; }
-
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input:-ms-input-placeholder,
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input:-ms-input-placeholder { color: #333333; }
-
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input:-moz-placeholder,
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input:-moz-placeholder { color: #333333; }
-
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow textarea, #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow textarea {
-        background-color: #ffffff !important;
-        color: #333333 !important;
-        border-color: #cccccc;
-        border-radius: 4px !important;
-        border-style: solid !important;
-        border-width: 1px !important;
-        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-        font-size: 14px !important;
-        height: auto;
-        line-height: 21px !important;
-        margin-bottom: 0;
-        margin-top: 0;
-        padding: 10px 10px !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-        max-width: 100% !important;
-      }
-
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label::before, #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label::before, #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::before, #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::before, #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before, #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before {
-          border-color: #cccccc!important;
-          background-color: #ffffff!important;
-      }
-
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-control, #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-control {
-        position: relative;
-        display: block;
-        min-height: 1.5rem;
-        padding-left: 1.5rem;
-      }
-
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input, #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-input, #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-input, #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-input {
-          position: absolute;
-          z-index: -1;
-          opacity: 0;
-          box-sizing: border-box;
-          padding: 0;
-      }
-
-    #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label, #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label, #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label, #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label {
-      color: #000000;
-      font-size: 12px!important;
-      font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-      line-height: 22px;
-      margin-bottom: 0;
-      position: relative;
-      font-style: normal;
-      font-weight: 700;
-    }
-
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-select, #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-select {
-        background-color: #ffffff !important;
-        color: #333333 !important;
-        border-color: #cccccc;
-        border-radius: 4px !important;
-        border-style: solid !important;
-        border-width: 1px !important;
-        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-        font-size: 14px !important;
-        line-height: 20px !important;
-        margin-bottom: 0;
-        margin-top: 0;
-        padding: 10px 28px 10px 12px !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-        max-width: 100% !important;
-        height: auto;
-        display: inline-block;
-        vertical-align: middle;
-        background: url('https://assets.mlcdn.com/ml/images/default/dropdown.svg') no-repeat right .75rem center/8px 10px;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-      }
-
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow {
-        height: auto;
-        width: 100%;
-        float: left;
-      }
-      .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal { width: 70%; float: left; }
-      .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-button-horizontal { width: 30%; float: left; }
-      .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-button-horizontal.labelsOn { padding-top: 25px;  }
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input {
-        background-color: #ffffff;
-        color: #333333;
-        border-color: #cccccc;
-        border-radius: 4px;
-        border-style: solid;
-        border-width: 1px;
-        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-        font-size: 14px;
-        line-height: 20px;
-        margin-bottom: 0;
-        margin-top: 0;
-        padding: 10px 10px;
-        width: 100%;
-        box-sizing: border-box;
-        overflow-y: initial;
-      }
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow button {
-        background-color: #000000 !important;
-        border-color: #000000;
-        border-style: solid;
-        border-width: 1px;
-        border-radius: 4px;
-        box-shadow: none;
-        color: #ffffff !important;
-        cursor: pointer;
-        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-        font-size: 14px !important;
-        font-weight: 700 !important;
-        line-height: 20px !important;
-        margin: 0 !important;
-        padding: 10px !important;
-        width: 100%;
-        height: auto;
-      }
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow button:hover {
-        background-color: #333333 !important;
-        border-color: #333333 !important;
-      }
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow input[type="checkbox"] {
-        box-sizing: border-box;
-        padding: 0;
-        position: absolute;
-        z-index: -1;
-        opacity: 0;
-        margin-top: 5px;
-        margin-left: -1.5rem;
-        overflow: visible;
-      }
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description {
-        color: #000000;
-        display: block;
-        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-        font-size: 12px;
-        text-align: left;
-        margin-bottom: 0;
-        position: relative;
-      }
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label {
-        font-weight: normal;
-        margin: 0;
-        padding: 0;
-        position: relative;
-        display: block;
-        min-height: 24px;
-        padding-left: 24px;
-
-      }
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label a {
-        color: #000000;
-        text-decoration: underline;
-      }
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label p {
-        color: #000000 !important;
-        font-family: 'Open Sans', Arial, Helvetica, sans-serif !important;
-        font-size: 12px !important;
-        font-weight: normal !important;
-        line-height: 18px !important;
-        padding: 0 !important;
-        margin: 0 5px 0 0 !important;
-      }
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label p:last-child {
-        margin: 0;
-      }
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit {
-        margin: 0 0 20px 0;
-        float: left;
-        width: 100%;
-      }
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button {
-        background-color: #000000 !important;
-        border: none !important;
-        border-radius: 4px !important;
-        box-shadow: none !important;
-        color: #ffffff !important;
-        cursor: pointer;
-        font-family: 'Open Sans', Arial, Helvetica, sans-serif !important;
-        font-size: 14px !important;
-        font-weight: 700 !important;
-        line-height: 21px !important;
-        height: auto;
-        padding: 10px !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-      }
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.loading {
-        display: none;
-      }
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button:hover {
-        background-color: #333333 !important;
-      }
-      .ml-subscribe-close {
-        width: 30px;
-        height: 30px;
-        background: url('https://assets.mlcdn.com/ml/images/default/modal_close.png') no-repeat;
-        background-size: 30px;
-        cursor: pointer;
-        margin-top: -10px;
-        margin-right: -10px;
-        position: absolute;
-        top: 0;
-        right: 0;
-      }
-      .ml-error input, .ml-error textarea, .ml-error select {
-        border-color: red!important;
-      }
-
-      .ml-error .custom-checkbox-radio-list {
-        border: 1px solid red !important;
-        border-radius: 4px;
-        padding: 10px;
-      }
-
-      .ml-error .label-description,
-      .ml-error .label-description p,
-      .ml-error .label-description p a,
-      .ml-error label:first-child {
-        color: #ff0000 !important;
-      }
-
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow.ml-error .label-description p,
-      #mlb2-35189939.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow.ml-error .label-description p:first-letter {
-        color: #ff0000 !important;
-      }
-            @media only screen and (max-width: 400px){
-
-        .ml-form-embedWrapper.embedDefault, .ml-form-embedWrapper.embedPopup { width: 100%!important; }
-        .ml-form-formContent.horozintalForm { float: left!important; }
-        .ml-form-formContent.horozintalForm .ml-form-horizontalRow { height: auto!important; width: 100%!important; float: left!important; }
-        .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal { width: 100%!important; }
-        .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal > div { padding-right: 0px!important; padding-bottom: 10px; }
-        .ml-form-formContent.horozintalForm .ml-button-horizontal { width: 100%!important; }
-        .ml-form-formContent.horozintalForm .ml-button-horizontal.labelsOn { padding-top: 0px!important; }
-
-      }
+        /* Smooth fade-out for animations */
+        .fade-out {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.6s ease, visibility 0.6s ease;
+        }
     </style>
 
-    <div id="mlb2-35189939" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-35189939">
-      <div class="ml-form-align-center ">
-        <div class="ml-form-embedWrapper embedForm">
 
-          <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+</head>
 
-            <div class="ml-form-embedContent">
-              
-                <h4>Newsletter</h4>
-                
-                  <p>Signup for news and special offers!</p>
-                
-              
+<body class="bg-neutral-50 text-gray-700 font-sans">
+    <!-- ================= NAVBAR ================= -->
+    <nav class="fixed top-4 inset-x-0 mx-auto w-[90%] bg-white rounded-3xl shadow-soft-lg z-50 overflow-visible border border-neutral-100">
+        <div class="flex items-center justify-between px-6 py-3">
+
+            <!-- Logo -->
+            <div class="flex items-center gap-3">
+                <img src="/asset/image/logo1-remove.png" alt="upPlan logo" width="90" class="h-12" />
             </div>
 
-            <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2010009/forms/175296527582889776/subscribe" data-code="" method="post">
-              <div class="ml-form-formContent">
-                
 
-                  <div class="ml-form-fieldRow ml-last-item">
-                    <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex gap-8 text-neutral-700 font-medium">
+                <li><a href="/index.html" class="hover:text-primary-600 transition-colors">Home</a></li>
+                <li><a href="/About.html" class="hover:text-primary-600 transition-colors">About</a></li>
+                <li><a href="/Services.html" class="hover:text-primary-600 transition-colors">Services</a></li>
+                <li><a href="/Contact.html" class="hover:text-primary-600 transition-colors">Contact</a></li>
+            </ul>
 
-                      <!-- input -->
-                      <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Email" autocomplete="email">
-                      <!-- /input -->
+            <!-- CTA -->
+            <a href="/signUP.html" class="hidden md:inline-block bg-gradient-to-r from-primary-600 to-primary-700 text-white px-6 py-2 rounded-full font-semibold shadow-soft-md hover:shadow-soft-lg transition-all hover:-translate-y-0.5">
+                Register
+            </a>
 
+            <!-- Toggle Button -->
+            <button id="menu-btn" class="md:hidden text-2xl text-neutral-700 transition-transform duration-300 hover:text-primary-600">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="absolute top-full left-0 w-full bg-white rounded-3xl shadow-soft-xl z-40 mt-2
+           opacity-0 -translate-y-6 pointer-events-none
+           transition-all duration-500
+           ease-[cubic-bezier(.34,1.56,.64,1)]
+           border border-neutral-100">
+            <ul class="flex flex-col text-center py-6 gap-4 font-medium text-neutral-700">
+                <li><a href="/index.html" class="hover:text-primary-600 transition-colors">Home</a></li>
+                <li><a href="/About.html" class="hover:text-primary-600 transition-colors">About</a></li>
+                <li><a href="/Services.html" class="hover:text-primary-600 transition-colors">Services</a></li>
+                <li><a href="/Contact.html" class="hover:text-primary-600 transition-colors">Contact</a></li>
+                <li>
+                    <a href="/signUP.html" class="inline-block bg-gradient-to-r from-primary-600 to-primary-700 text-white px-6 py-2 rounded-full font-semibold shadow-soft-md mt-2 transition-all hover:-translate-y-0.5">
+                        Register
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="pt-20">
+        <!-- home -->
+        <section class="bg-neutral-50 py-20 px-6">
+            <div class="relative max-w-7xl mx-auto rounded-3xl overflow-hidden bg-cover bg-center"
+                style="background-image: url('/asset/image/home2.jpg');">
+
+                <div class="absolute inset-0 bg-black/60"></div>
+
+                <!-- Content -->
+                <div class="relative p-12 md:p-20 text-white max-w-3xl">
+                    <h1 class="text-4xl md:text-5xl lg:text-5xl font-bold leading-tight" data-aos="zoom-in">
+                        <span class="text-primary-300">upPlan</span>, up your profitability <br />
+                    </h1>
+                    <p class="text-2xl mt-4 mb-4 text-neutral-200">We look then you leap</p>
+
+                    <button class="mt-12 w-full max-w-xs mx-auto block rounded-full bg-gradient-to-r from-primary-600 to-primary-700 px-6 py-3 font-semibold text-white
+                    shadow-soft-xl
+                    transition-all duration-250 hover:-translate-y-0.5 hover:shadow-soft-2xl active:translate-y-0">
+                        Get in Touch
+                    </button>
+
+
+                    <!-- Info Card -->
+                    <div class="mt-8 rounded-2xl bg-neutral-900/60 backdrop-blur-md p-6 grid grid-cols-1 sm:grid-cols-2 gap-6 border border-white/10"
+                        data-aos="flip-left">
+                        <div>
+                            <p class="text-sm text-primary-300 font-semibold">location</p>
+                            <p class="font-medium text-neutral-100">Abakaliki Ebonyi state</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-primary-300 font-semibold">Phone</p>
+                            <p class="font-medium text-neutral-100">(+234) 9110 891 201</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-primary-300 font-semibold">Email</p>
+                            <p class="font-medium text-neutral-100">upplanoffical@gmail.com</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-primary-300 font-semibold">Twitter</p>
+                            <p class="font-medium text-neutral-100">@upPlanOffical</p>
+                        </div>
                     </div>
-                  </div>
-                
-              </div>
+                </div>
+            </div>
+        </section>
 
-              <input type="hidden" name="ml-submit" value="1">
+        <!-- FLOWING TEXT -->
+        <section class="relative overflow-hidden bg-neutral-900 py-6">
+            <div class="flex w-max animate-marquee">
 
-              <div class="ml-form-embedSubmit">
-                
-                  <button type="submit" class="primary">Subscribe</button>
-                
-                <button disabled="disabled" style="display: none;" type="button" class="loading">
-                  <div class="ml-form-embedSubmitLoad"></div>
-                  <span class="sr-only">Loading...</span>
-                </button>
-              </div>
+                <div class="flex whitespace-nowrap">
+                    <p class="mx-8 text-lg font-semibold text-primary-400">
+                        Your Strategy Is Not the Problem. Your Discipline Is • UpPlan exists to enforce what you already
+                        know you should do • Emotional trading eliminated • Start Building Discipline Today
+                    </p>
+                    <p class="mx-8 text-lg font-semibold text-primary-400">
+                        Your Strategy Is Not the Problem. Your Discipline Is • UpPlan exists to enforce what you already
+                        know you should do • Emotional trading eliminated • Start Building Discipline Today
+                    </p>
+                    <p class="mx-8 text-lg font-semibold text-primary-400">
+                        Your Strategy Is Not the Problem. Your Discipline Is • UpPlan exists to enforce what you already
+                        know you should do • Emotional trading eliminated • Start Building Discipline Today
+                    </p>
+                </div>
 
-              <input type="hidden" name="anticsrf" value="true">
-            </form>
-          </div>
+                <!-- (DUPLICATE FOR LOOP) -->
+                <div class="flex whitespace-nowrap">
+                    <p class="mx-8 text-lg font-semibold text-primary-400">
+                        Your Strategy Is Not the Problem. Your Discipline Is • UpPlan exists to enforce what you already
+                        know you should do • Emotional trading eliminated • Start Building Discipline Today
+                    </p>
+                    <p class="mx-8 text-lg font-semibold text-primary-400">
+                        Your Strategy Is Not the Problem. Your Discipline Is • UpPlan exists to enforce what you already
+                        know you should do • Emotional trading eliminated • Start Building Discipline Today
+                    </p>
+                    <p class="mx-8 text-lg font-semibold text-primary-400">
+                        Your Strategy Is Not the Problem. Your Discipline Is • UpPlan exists to enforce what you already
+                        know you should do • Emotional trading eliminated • Start Building Discipline Today
+                    </p>
+                </div>
 
-          <div class="ml-form-successBody row-success" style="display: none">
+            </div>
+        </section>
 
-            <div class="ml-form-successContent">
-              
-                <h4>Thank you!</h4>
-                
-                  <p>You have successfully joined our subscriber list.</p>
-                
-              
+        <section class="bg-white py-24 px-6">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+                <!-- IMAGE SIDE -->
+                <div class="relative">
+
+                    <!-- Main image -->
+                    <img src="/asset/image/people.jpg" alt="Service preview"
+                        class="w-full rounded-3xl object-cover shadow-soft-2xl" />
+
+                    <!-- Floating image (HALF OVERLAP) -->
+                    <div class="absolute top-1/2 right-0 hidden md:block translate-x-1/4 -translate-y-1/2">
+                        <img src="/asset/image/people3.jpg" alt="Detail"
+                            class="w-72 rounded-3xl shadow-soft-2xl border border-primary-100" />
+                    </div>
+
+                    <!-- Experience badge -->
+                    <div class="absolute top-6 left-6 rounded-2xl bg-gradient-to-r from-primary-600 to-primary-700 text-white px-6 py-4 shadow-soft-lg font-medium">
+                        <p class="text-2xl font-bold">30+</p>
+                        <p class="text-sm">Active Traders</p>
+                    </div>
+
+                </div>
+
+
+                <!-- CONTENT SIDE -->
+                <div>
+                    <span class="inline-block mb-4 text-sm font-semibold tracking-widest text-primary-600 uppercase">
+                        Get to know
+                    </span>
+
+                    <h2 class="text-4xl lg:text-5xl font-bold text-neutral-900 leading-tight">
+                        We provide structured <br />
+                        <span class="text-primary-600">trading discipline</span> systems
+                    </h2>
+
+                    <p class="mt-6 text-neutral-600 max-w-xl leading-relaxed">
+                        UpPlan enforces accountability, risk management, and consistency —
+                        helping traders eliminate emotional decisions and scale sustainably.
+                    </p>
+
+                    <!-- Bullet points -->
+                    <ul class="mt-8 space-y-4">
+                        <li class="flex items-start gap-3">
+                            <span class="mt-1 h-2 w-2 rounded-full bg-primary-500 flex-shrink-0"></span>
+                            <span class="text-neutral-700">
+                                Enforced trading rules & risk limits
+                            </span>
+                        </li>
+
+                        <li class="flex items-start gap-3">
+                            <span class="mt-1 h-2 w-2 rounded-full bg-primary-500 flex-shrink-0"></span>
+                            <span class="text-neutral-700">
+                                Weekly discipline scoring & performance reviews
+                            </span>
+                        </li>
+
+                        <li class="flex items-start gap-3">
+                            <span class="mt-1 h-2 w-2 rounded-full bg-primary-500 flex-shrink-0"></span>
+                            <span class="text-neutral-700">
+                                Human + system accountability (not automated fluff)
+                            </span>
+                        </li>
+                    </ul>
+
+                    <!-- CTA -->
+                    <div class="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-6">
+                        <a href="#pricing">
+                            <button class="w-full sm:w-auto rounded-full bg-gradient-to-r from-primary-600 to-primary-700 px-8 py-3 font-semibold text-white
+                            shadow-soft-lg
+                            transition-all duration-250 hover:-translate-y-0.5 hover:shadow-soft-xl active:translate-y-0">
+                                Explore plans
+                            </button>
+                        </a>
+
+                        <div class="flex items-center gap-3">
+                            <div class="text-sm">
+                                <p class="font-semibold text-neutral-900">UpPlan Team</p>
+                                <p class="text-neutral-500">Trader Accountability</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- service -->
+        <section class="bg-white py-24 px-6">
+            <div class="max-w-7xl mx-auto">
+
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-neutral-900">
+                        Our <span class="text-primary-600">Services</span>
+                    </h2>
+                    <p class="mt-4 text-neutral-600 max-w-xl mx-auto leading-relaxed">
+                        Premium tools and accountability systems designed to help traders
+                        scale with discipline and consistency.
+                    </p>
+                </div>
+
+                <!-- Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Card 1 -->
+                    <div class="group relative rounded-3xl bg-white p-8
+                         border border-neutral-100
+                         shadow-soft-lg
+                         transition-all duration-300
+                         hover:-translate-y-2 hover:border-primary-200 hover:shadow-soft-xl" data-aos="flip-left">
+
+                        <div
+                            class="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary-50 to-transparent opacity-0 group-hover:opacity-100 transition duration-500">
+                        </div>
+
+                        <div class="relative mb-6 flex h-14 w-14 items-center justify-center rounded-2xl
+                              bg-gradient-to-br from-primary-100 to-primary-50 text-primary-600 text-2xl border border-primary-100">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+
+                        <h3 class="relative text-xl font-semibold text-neutral-900 mb-3">
+                            Trading Plan Enforcement
+                        </h3>
+
+                        <p class="relative text-neutral-600 leading-relaxed mb-4">
+                            First, we help traders create a solid risk plan — or refine an existing one —
+                            to ensure structure, discipline, and long-term consistency.
+                        </p>
+
+                        <ul class="relative space-y-2 text-neutral-700 text-sm mb-6">
+                            <li class="flex items-center gap-2">
+                                <span class="h-2 w-2 rounded-full bg-primary-500 flex-shrink-0"></span>
+                                Risk rules
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="h-2 w-2 rounded-full bg-primary-500 flex-shrink-0"></span>
+                                Maximum trades per day
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="h-2 w-2 rounded-full bg-primary-500 flex-shrink-0"></span>
+                                Daily loss limit
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="h-2 w-2 rounded-full bg-primary-500 flex-shrink-0"></span>
+                                Strategy rules
+                            </li>
+                        </ul>
+
+                        <!-- Footer -->
+                        <div class="relative flex items-center justify-between gap-4">
+                            <span class="text-sm font-semibold text-primary-600 tracking-widest uppercase">
+                                UPPLAN Framework
+                            </span>
+
+                            <a href="/Services.html">
+                                <button class="rounded-full bg-gradient-to-r from-primary-600 to-primary-700 px-6 py-2
+                            font-medium text-white text-sm
+                            shadow-soft-md
+                            transition-all duration-250 hover:-translate-y-0.5 hover:shadow-soft-lg active:translate-y-0">
+                                    Learn More
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="group relative rounded-3xl bg-gradient-to-br from-white via-white to-primary-50 p-8
+                         border border-primary-200
+                         shadow-soft-lg
+                         transition-all duration-300
+                         hover:-translate-y-2 hover:shadow-soft-xl"
+                        data-aos="flip-up">
+
+                        <div
+                            class="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary-100/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-500">
+                        </div>
+
+                        <div class="relative mb-6 flex h-14 w-14 items-center justify-center rounded-2xl
+                              bg-gradient-to-br from-primary-100 to-primary-50 text-primary-600 text-2xl border border-primary-100">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                        </div>
+
+                        <!-- Title -->
+                        <h3 class="relative text-xl font-semibold text-neutral-900 mb-3">
+                            Trade Accountability & Review
+                        </h3>
+
+                        <!-- Description -->
+                        <p class="relative text-neutral-600 leading-relaxed mb-4">
+                            We journal the traders trade daily and record discipline score and make sure the trader is
+                            following the trade and risk plan.
+                        </p>
+
+                        <!-- List -->
+                        <ul class="relative space-y-2 text-neutral-700 text-sm mb-6">
+                            <li class="flex items-start gap-2">
+                                <span class="h-2 w-2 rounded-full bg-primary-500 flex-shrink-0 mt-1"></span>
+                                <span>Trader submits trades via (screenshots/statements)</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="h-2 w-2 rounded-full bg-primary-500 flex-shrink-0 mt-1"></span>
+                                <span>Weekly summary</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="h-2 w-2 rounded-full bg-primary-500 flex-shrink-0 mt-1"></span>
+                                <span>We Compare trades to your/our trading plan</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="h-2 w-2 rounded-full bg-primary-500 flex-shrink-0 mt-1"></span>
+                                <span>Track emotional mistakes</span>
+                            </li>
+
+                            <li class="flex items-start gap-2">
+                                <span class="h-2 w-2 rounded-full bg-primary-500 flex-shrink-0 mt-1"></span>
+                                <span>Score discipline (0–100) (discipline score must stay above 75 at all times)</span>
+                            </li>
+
+                            <li class="flex items-start gap-2">
+                                <span class="h-2 w-2 rounded-full bg-primary-500 flex-shrink-0 mt-1"></span>
+                                <span>Deliverable to trader: Weekly report, Mistake pattern insights, Next week correction focus</span>
+                            </li>
+                        </ul>
+
+                        <!-- Footer -->
+                        <div class="relative flex items-center justify-between gap-4">
+                            <span class="text-sm font-semibold text-primary-600 tracking-widest uppercase">
+                                UPPLAN Framework
+                            </span>
+
+                            <a href="/Services.html">
+                                <button class="rounded-full bg-gradient-to-r from-primary-600 to-primary-700 px-6 py-2
+                            font-medium text-white text-sm
+                            shadow-soft-md
+                            transition-all duration-250 hover:-translate-y-0.5 hover:shadow-soft-lg active:translate-y-0">
+                                    Learn More
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="group relative rounded-3xl bg-white p-8
+                         border border-neutral-100
+                         shadow-soft-lg
+                         transition-all duration-300
+                         hover:-translate-y-2 hover:border-primary-200 hover:shadow-soft-xl" data-aos="flip-left">
+
+                        <div
+                            class="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary-50 to-transparent opacity-0 group-hover:opacity-100 transition duration-500">
+                        </div>
+
+                        <div class="relative mb-6 flex h-14 w-14 items-center justify-center rounded-2xl
+                              bg-gradient-to-br from-primary-100 to-primary-50 text-primary-600 text-2xl border border-primary-100">
+                            <i class="fa-brands fa-watchman-monitoring"></i>
+                        </div>
+
+                        <h3 class="relative text-xl font-semibold text-neutral-900 mb-3">Challenge Monitoring
+                            (Prop-Specific)</h3>
+
+                        <p class="relative text-neutral-600 leading-relaxed mb-4">
+                            If the account is a prop account, we make sure the rule is in compliance with the prop firm
+                            rules to ensure all prop trading rules are respected.
+                        </p>
+
+                        <p class="relative text-neutral-900 font-semibold text-sm mb-3">
+                            What we do: We monitor
+                        </p>
+
+                        <ul class="relative space-y-2 text-neutral-700 text-sm mb-6">
+                            <li class="flex items-center gap-2">
+                                <span class="h-2 w-2 rounded-full bg-primary-500 flex-shrink-0"></span>
+                                Drawdown rules
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="h-2 w-2 rounded-full bg-primary-500 flex-shrink-0"></span>
+                                Daily loss rules
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="h-2 w-2 rounded-full bg-primary-500 flex-shrink-0"></span>
+                                Consistency rules
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="h-2 w-2 rounded-full bg-primary-500 flex-shrink-0"></span>
+                                Strategy rules
+                            </li>
+                        </ul>
+
+                        <p class="relative text-neutral-900 font-semibold text-sm mb-3">
+                            Warn trader when they are:
+                        </p>
+
+                        <ul class="relative space-y-2 text-neutral-700 text-sm mb-6">
+                            <li class="flex items-center gap-2">
+                                <span class="h-2 w-2 rounded-full bg-primary-500 flex-shrink-0"></span>
+                                Overtrading
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="h-2 w-2 rounded-full bg-primary-500 flex-shrink-0"></span>
+                                Near violation
+                            </li>
+                        </ul>
+
+                        <!-- Footer -->
+                        <div class="relative flex items-center justify-between gap-4">
+                            <span class="text-sm font-semibold text-primary-600 tracking-widest uppercase">
+                                UPPLAN Framework
+                            </span>
+
+                            <a href="/Services.html">
+                                <button class="rounded-full bg-gradient-to-r from-primary-600 to-primary-700 px-6 py-2
+                            font-medium text-white text-sm
+                            shadow-soft-md
+                            transition-all duration-250 hover:-translate-y-0.5 hover:shadow-soft-lg active:translate-y-0">
+                                    Learn More
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Breach System -->
+        <section class="relative bg-fixed bg-center bg-cover py-28 px-6"
+            style="background-image: url('/asset/image/branch-bg3.jpg');">
+            <div class="absolute inset-0 bg-black/75"></div>
+
+            <div class="relative max-w-7xl mx-auto">
+
+                <!-- Header -->
+                <div class="max-w-3xl mb-16" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                    <span class="inline-flex items-center gap-2 rounded-full
+                       bg-primary-600/15 px-4 py-1 text-sm font-semibold text-primary-300 tracking-widest uppercase">
+                        Breach System
+                    </span>
+
+                    <h2 class="mt-6 text-4xl font-bold text-white leading-tight">
+                        Discipline is non-negotiable
+                    </h2>
+
+                    <p class="mt-4 text-neutral-300 leading-relaxed">
+                        The Breach System exists to enforce accountability and build disciplined
+                        traders. Without strict enforcement, the purpose of UpPlan is defeated.
+                    </p>
+                </div>
+
+                <!-- Rules -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                    <!-- Rule 1 -->
+                    <div class="relative rounded-3xl border border-neutral-700/50
+                      bg-neutral-900/70 backdrop-blur-sm p-8 transition-all duration-300 hover:border-primary-500/40 hover:bg-neutral-900/90" data-aos="zoom-in-up">
+                        <span class="absolute -top-3 left-6 rounded-full
+                         bg-gradient-to-r from-primary-600 to-primary-700 px-4 py-1.5 text-xs font-semibold text-white tracking-widest">
+                            Rule 01
+                        </span>
+
+                        <h3 class="mt-4 text-xl font-semibold text-white">
+                            False Trade Reporting
+                        </h3>
+
+                        <p class="mt-3 text-neutral-400 leading-relaxed">
+                            Any form of lying, manipulation, or misreporting of trades
+                            results in immediate cancellation of the UpPlan subscription.
+                        </p>
+                    </div>
+
+                    <!-- Rule 2 -->
+                    <div class="relative rounded-3xl border border-primary-500/40
+                      bg-neutral-900/70 backdrop-blur-sm p-8 transition-all duration-300 hover:border-primary-500/60 hover:bg-neutral-900/90 shadow-soft-lg" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000">
+                        <span class="absolute -top-3 left-6 rounded-full
+                         bg-gradient-to-r from-primary-600 to-primary-700 px-4 py-1.5 text-xs font-semibold text-white tracking-widest">
+                            Rule 02
+                        </span>
+
+                        <h3 class="mt-4 text-xl font-semibold text-white">
+                            Repeated Rule Violations
+                        </h3>
+
+                        <p class="mt-3 text-neutral-400 leading-relaxed">
+                            Continuous disregard for established rules
+                            leads to immediate termination — no exceptions.
+                        </p>
+                    </div>
+
+                    <!-- Rule 3 -->
+                    <div class="relative rounded-3xl border border-white/10
+                      bg-neutral-900/80 backdrop-blur p-8" data-aos="zoom-in-down">
+                        <span class="absolute -top-3 left-6 rounded-full
+                         bg-primary px-4 py-1 text-xs font-semibold text-black">
+                            Rule 03
+                        </span>
+
+                        <h3 class="mt-4 text-xl font-semibold text-white">
+                            Discipline Score Threshold
+                        </h3>
+
+                        <p class="mt-3 text-neutral-300 leading-relaxed">
+                            If a trader’s discipline score drops below
+                            <span class="text-primary font-semibold">75%</span>,
+                            the subscription is immediately revoked.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="mt-16 max-w-3xl border-l-4 border-primary pl-6">
+                    <p class="text-neutral-200 text-lg leading-relaxed">
+                        This system protects serious traders.
+                        Discipline is the foundation of profitability.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Pricing -->
+        <section id="pricing" class="relative py-32 px-6 bg-white text-neutral-900">
+            <div class="max-w-7xl mx-auto">
+
+                <!-- Header -->
+                <div class="mb-24 text-center" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+                    <p class="text-primary-600 tracking-widest uppercase text-sm font-bold">
+                        Pricing
+                    </p>
+                    <h2 class="mt-4 text-5xl font-bold">
+                        Choose your level of discipline
+                    </h2>
+                </div>
+
+                <!-- Pricing Grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+                    <!-- Plan 1: Builder -->
+                    <div class="relative rounded-3xl border border-neutral-200 p-12
+                                    bg-white text-neutral-900
+                                    shadow-soft-lg
+                                    transition-all duration-300 hover:border-primary-300 hover:shadow-soft-xl hover:-translate-y-1" data-aos="fade-right" data-aos-offset="300"
+                        data-aos-easing="ease-in-sine">
+
+                        <h3 class="text-3xl font-semibold text-neutral-900">UpPlan Builder</h3>
+                        <p class="mt-3 text-neutral-600">
+                            For traders building structure and consistency.
+                        </p>
+
+                        <p class="mt-10 text-6xl font-bold text-neutral-900">
+                            $20<span class="text-2xl text-neutral-600 font-normal">/mo</span>
+                        </p>
+
+                        <p class="mt-4 text-sm text-neutral-500">
+                            $55 quarterly · $105 semi-annually · $200 yearly
+                        </p>
+
+                        <div class="my-10 h-px bg-neutral-200"></div>
+
+                        <ul class="space-y-4 text-neutral-700">
+                            <li class="flex items-start gap-3">
+                                <span class="h-1.5 w-1.5 rounded-full bg-primary-500 mt-1.5 flex-shrink-0"></span>
+                                <span>Trading plan setup & review</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="h-1.5 w-1.5 rounded-full bg-primary-500 mt-1.5 flex-shrink-0"></span>
+                                <span>Weekly discipline score tracking</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="h-1.5 w-1.5 rounded-full bg-primary-500 mt-1.5 flex-shrink-0"></span>
+                                <span>Trade journaling & logging</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="h-1.5 w-1.5 rounded-full bg-primary-500 mt-1.5 flex-shrink-0"></span>
+                                <span>Performance summaries</span>
+                            </li>
+                        </ul>
+
+                        <button class="mt-12 w-full rounded-full border border-primary-500 py-3 font-semibold text-primary-600
+                                         transition-all duration-250 hover:bg-primary-50 hover:border-primary-600">
+                            Start with Builder
+                        </button>
+                    </div>
+
+                    <!-- Plan 2: Accelerator (Featured) -->
+                    <div class="relative rounded-3xl border border-primary-400 p-12
+                                    bg-gradient-to-br from-white via-white to-primary-50 text-neutral-900
+                                    shadow-soft-2xl
+                                    transition-all duration-300 hover:shadow-soft-3xl hover:-translate-y-2">
+
+                        <span class="absolute -top-4 left-1/2 -translate-x-1/2
+                                       rounded-full bg-gradient-to-r from-primary-600 to-primary-700 px-6 py-2 text-xs
+                                       font-bold text-white tracking-widest uppercase">
+                            Most Chosen
+                        </span>
+
+                        <h3 class="text-3xl font-semibold text-neutral-900">UpPlan Accelerator</h3>
+                        <p class="mt-3 text-neutral-600">
+                            For traders scaling funded accounts with elite discipline.
+                        </p>
+
+                        <p class="mt-10 text-6xl font-bold text-primary-600">
+                            $50<span class="text-2xl text-neutral-600 font-normal">/mo</span>
+                        </p>
+
+                        <p class="mt-4 text-sm text-neutral-500">
+                            $140 quarterly · $270 semi-annually · $500 yearly
+                        </p>
+
+                        <div class="my-10 h-px bg-primary-200"></div>
+
+                        <ul class="space-y-4 text-neutral-700">
+                            <li class="flex items-start gap-3">
+                                <span class="h-1.5 w-1.5 rounded-full bg-primary-500 mt-1.5 flex-shrink-0"></span>
+                                <span><strong>Everything in Builder</strong></span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="h-1.5 w-1.5 rounded-full bg-primary-500 mt-1.5 flex-shrink-0"></span>
+                                <span>Trade-by-trade review</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="h-1.5 w-1.5 rounded-full bg-primary-500 mt-1.5 flex-shrink-0"></span>
+                                <span>Prop challenge monitoring</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="h-1.5 w-1.5 rounded-full bg-primary-500 mt-1.5 flex-shrink-0"></span>
+                                <span>Priority feedback</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="h-1.5 w-1.5 rounded-full bg-primary-500 mt-1.5 flex-shrink-0"></span>
+                                <span>Daily trade discipline tracking</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="h-1.5 w-1.5 rounded-full bg-primary-500 mt-1.5 flex-shrink-0"></span>
+                                <span>Personalized correction guidance</span>
+                            </li>
+                        </ul>
+
+                        <button class="mt-12 w-full rounded-full bg-gradient-to-r from-primary-600 to-primary-700 py-3
+                                         font-semibold text-white
+                                         shadow-soft-lg
+                                         transition-all duration-250 hover:-translate-y-0.5 hover:shadow-soft-xl active:translate-y-0">
+                            Upgrade to Accelerator
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- banner -->
+        <section class="px-6 py-16">
+            <div class="max-w-6xl mx-auto relative overflow-hidden rounded-3xl
+                        bg-neutral-950 text-white shadow-soft-2xl border border-neutral-800">
+
+                <div class="absolute -top-24 -right-24 w-72 h-72 bg-primary-600/20 blur-3xl"></div>
+
+                <div class="relative p-8 sm:p-12 md:p-16 text-center">
+                    <span class="inline-block mb-4 px-4 py-2 rounded-full
+                             bg-primary-600/20 text-primary-300 text-sm font-semibold tracking-widest uppercase">
+                        Subscription Policy
+                    </span>
+
+                    <h3 class="text-2xl sm:text-3xl font-bold mb-6 text-white">
+                        Important Subscription Notice
+                    </h3>
+
+                    <p class="text-neutral-300 max-w-3xl mx-auto leading-relaxed text-base sm:text-lg">
+                        Per evaluation, subscriptions are paid for
+                        <span class="text-white font-semibold"> a minimum of 3 months</span>.
+                        If a trader loses an account while maintaining
+                        <span class="text-primary-300 font-semibold"> proper discipline score and risk management</span>,
+                        they are eligible to register a new account under the
+                        <span class="text-white font-semibold"> same subscription</span>.
+                    </p>
+
+                    <div class="mt-8">
+                        <button class="inline-flex items-center justify-center rounded-full
+                                 bg-gradient-to-r from-primary-600 to-primary-700 px-8 py-3 font-semibold text-white
+                                 shadow-soft-lg
+                                 transition-all duration-250 hover:-translate-y-0.5 hover:shadow-soft-xl active:translate-y-0">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RESULTS / OUTCOMES -->
+        <section class="bg-white py-16 sm:py-24 lg:py-28 px-4 sm:px-6">
+            <div class="max-w-7xl mx-auto">
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+
+                    <!-- Card -->
+                    <div class="relative overflow-hidden rounded-3xl bg-white p-6 sm:p-8
+                 border border-neutral-200
+                 shadow-soft-md
+                 transition-all duration-300
+                 hover:-translate-y-1 hover:border-primary-300
+                 hover:shadow-soft-lg" data-aos="fade-up">
+                        <!-- Badge -->
+                        <span class="absolute top-4 left-4
+                   rounded-full bg-gradient-to-r from-primary-500 to-primary-600 px-3 py-1
+                   text-xs font-semibold text-white tracking-widest uppercase">
+                            Discipline
+                        </span>
+
+                        <p class="mt-10 text-5xl font-bold text-primary-600">↑</p>
+
+                        <h3 class="mt-4 text-lg sm:text-xl font-semibold text-neutral-900">
+                            Discipline Score Improvement
+                        </h3>
+
+                        <p class="mt-3 text-sm text-neutral-600 leading-relaxed">
+                            Traders improve consistency by operating within
+                            clearly defined risk and execution rules.
+                        </p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="relative overflow-hidden rounded-3xl bg-white p-6 sm:p-8
+                    border border-neutral-200 shadow-soft-md
+                    transition-all duration-300 hover:-translate-y-1 hover:border-primary-300
+                    hover:shadow-soft-lg" data-aos="fade-up" data-aos-delay="100">
+
+                        <span class="absolute top-4 left-4 rounded-full bg-gradient-to-r from-primary-500 to-primary-600 px-3 py-1
+                       text-xs font-semibold text-white tracking-widest uppercase">
+                            Control
+                        </span>
+
+                        <p class="mt-10 text-5xl font-bold text-primary-600">↓</p>
+
+                        <h3 class="mt-4 text-lg sm:text-xl font-semibold text-neutral-900">
+                            Rule Violations
+                        </h3>
+
+                        <p class="mt-3 text-sm text-neutral-600 leading-relaxed">
+                            Overtrading and repeated rule breaks are reduced
+                            through active monitoring and enforcement.
+                        </p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="relative overflow-hidden rounded-3xl bg-white p-6 sm:p-8
+                    border border-neutral-200 shadow-soft-md
+                    transition-all duration-300 hover:-translate-y-1 hover:border-primary-300
+                    hover:shadow-soft-lg" data-aos="fade-up" data-aos-delay="200">
+
+                        <span class="absolute top-4 left-4 rounded-full bg-gradient-to-r from-primary-500 to-primary-600 px-3 py-1
+                       text-xs font-semibold text-white tracking-widest uppercase">
+                            Consistency
+                        </span>
+
+                        <p class="mt-10 text-5xl font-bold text-primary-600">↑</p>
+
+                        <h3 class="mt-4 text-lg sm:text-xl font-semibold text-neutral-900">
+                            Funded Account Retention
+                        </h3>
+
+                        <p class="mt-3 text-sm text-neutral-600 leading-relaxed">
+                            Traders maintain funded accounts longer by staying
+                            compliant with prop firm risk parameters.
+                        </p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="relative overflow-hidden rounded-3xl bg-white p-6 sm:p-8
+                    border border-neutral-200 shadow-soft-md
+                    transition-all duration-300 hover:-translate-y-1 hover:border-primary-300
+                    hover:shadow-soft-lg" data-aos="fade-up" data-aos-delay="300">
+
+                        <span class="absolute top-4 left-4 rounded-full bg-gradient-to-r from-primary-500 to-primary-600 px-3 py-1
+                       text-xs font-semibold text-white tracking-widest uppercase">
+                            Psychology
+                        </span>
+
+                        <p class="mt-10 text-5xl font-bold text-primary-600">↓</p>
+
+                        <h3 class="mt-4 text-lg sm:text-xl font-semibold text-neutral-900">
+                            Emotional Trading
+                        </h3>
+
+                        <p class="mt-3 text-sm text-neutral-600 leading-relaxed">
+                            Impulsive decisions decrease as execution becomes
+                            system-driven instead of emotional.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ SECTION -->
+        <section class="bg-white py-16 px-6">
+            <div class="max-w-6xl mx-auto">
+
+                <div class="max-w-3xl mb-20">
+                    <p class="text-primary-600 uppercase tracking-widest text-sm font-bold">
+                        FAQ
+                    </p>
+                    <h2 class="mt-4 text-4xl md:text-5xl font-bold text-neutral-900">
+                        Clear Rules. No Ambiguity.
+                    </h2>
+                    <p class="mt-6 text-neutral-600 text-lg leading-relaxed">
+                        UpPlan operates on enforcement and accountability.
+                        These answers are direct — by design.
+                    </p>
+                </div>
+
+                <div class="space-y-4">
+
+                    <div class="faq-item rounded-2xl border border-neutral-200 bg-white transition-all duration-300 hover:border-primary-300 hover:shadow-soft-md">
+                        <button class="faq-btn flex w-full items-center justify-between px-8 py-6 text-left">
+                            <span class="text-lg font-semibold text-neutral-900">
+                                What happens if I break a rule?
+                            </span>
+                            <i class="fa-solid fa-plus text-primary-600 transition-transform"></i>
+                        </button>
+
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500">
+                            <p class="px-8 pb-6 text-neutral-600 leading-relaxed">
+                                Rule violations are logged instantly.
+                                Repeated or serious breaches result in immediate
+                                subscription termination. No warnings.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item rounded-2xl border border-neutral-200 bg-white transition-all duration-300 hover:border-primary-300 hover:shadow-soft-md">
+                        <button class="faq-btn flex w-full items-center justify-between px-8 py-6 text-left">
+                            <span class="text-lg font-semibold text-neutral-900">
+                                Can I hide trades?
+                            </span>
+                            <i class="fa-solid fa-plus text-primary-600 transition-transform"></i>
+                        </button>
+
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500">
+                            <p class="px-8 pb-6 text-neutral-600 leading-relaxed">
+                                No. All trades must be submitted and verified.
+                                Any attempt to hide, alter, or misreport trades
+                                results in immediate cancellation.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="faq-item rounded-3xl border border-neutral-200 bg-white">
+                        <button class="faq-btn flex w-full items-center justify-between px-8 py-6 text-left">
+                            <span class="text-lg font-semibold text-neutral-900">
+                                Is this system automated?
+                            </span>
+                            <i class="fa-solid fa-plus text-primary transition-transform"></i>
+                        </button>
+
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500">
+                            <p class="px-8 pb-6 text-neutral-600 leading-relaxed">
+                                It’s a hybrid system.
+                                Automation tracks performance and rule compliance,
+                                while humans enforce discipline and accountability.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="faq-item rounded-3xl border border-neutral-200 bg-white">
+                        <button class="faq-btn flex w-full items-center justify-between px-8 py-6 text-left">
+                            <span class="text-lg font-semibold text-neutral-900">
+                                What if my discipline score drops?
+                            </span>
+                            <i class="fa-solid fa-plus text-primary transition-transform"></i>
+                        </button>
+
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500">
+                            <p class="px-8 pb-6 text-neutral-600 leading-relaxed">
+                                If your discipline score falls below
+                                <span class="font-semibold text-primary">75%</span>,
+                                your subscription is terminated automatically.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-neutral-950 text-neutral-400 pt-20 pb-10 px-6 border-t border-neutral-800">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+
+            <!-- Brand -->
+            <div>
+                <img src="/asset/image/logo2-remove.png" alt="upPlan logo" width="100" class="h-15 mb-4">
+                <p class="text-sm leading-relaxed text-neutral-500">
+                    upPlan is a trader accountability and performance-tracking platform
+                    built to enforce discipline, structure, and long-term consistency.
+                </p>
             </div>
 
-          </div>
+            <!-- Company -->
+            <div>
+                <h4 class="text-white font-semibold mb-4 tracking-wide">Company</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="#" class="text-neutral-400 hover:text-primary-400 transition-colors">About Us</a></li>
+                    <li><a href="#" class="text-neutral-400 hover:text-primary-400 transition-colors">Services</a></li>
+                    <li><a href="#" class="text-neutral-400 hover:text-primary-400 transition-colors">Pricing</a></li>
+                    <li><a href="#" class="text-neutral-400 hover:text-primary-400 transition-colors">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Resources -->
+            <div>
+                <h4 class="text-white font-semibold mb-4 tracking-wide">Resources</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="#" class="text-neutral-400 hover:text-primary-400 transition-colors">FAQs</a></li>
+                    <li><a href="#" class="text-neutral-400 hover:text-primary-400 transition-colors">Terms & Conditions</a></li>
+                    <li><a href="#" class="text-neutral-400 hover:text-primary-400 transition-colors">Privacy Policy</a></li>
+                    <li><a href="#" class="text-neutral-400 hover:text-primary-400 transition-colors">Discipline Rules</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h4 class="text-white font-semibold mb-4 tracking-wide">Contact</h4>
+                <ul class="space-y-3 text-sm">
+                    <li>
+                        <span class="text-primary-400 font-semibold">Email:</span><br>
+                        <span class="text-neutral-400">upplanoffical@gmail.com</span>
+                    </li>
+                    <li>
+                        <span class="text-primary-400 font-semibold">Phone:</span><br>
+                        <span class="text-neutral-400">(+234) 9110 891 201</span>
+                    </li>
+                    <li>
+                        <span class="text-primary-400 font-semibold">Location:</span><br>
+                        <span class="text-neutral-400">Abakaliki, Ebonyi State</span>
+                    </li>
+                </ul>
+
+                <!-- Social Icons -->
+                <div class="flex gap-4 mt-6">
+                    <a href="#" class="h-10 w-10 flex items-center justify-center rounded-full
+                                bg-neutral-800 text-neutral-400 hover:bg-primary-600/20 hover:text-primary-400 transition-all duration-250">
+                        <i class="fab fa-twitter text-sm"></i>
+                    </a>
+                    <a href="#" class="h-10 w-10 flex items-center justify-center rounded-full
+                                bg-neutral-800 text-neutral-400 hover:bg-primary-600/20 hover:text-primary-400 transition-all duration-250">
+                        <i class="fab fa-instagram text-sm"></i>
+                    </a>
+                    <a href="#" class="h-10 w-10 flex items-center justify-center rounded-full
+                                bg-neutral-800 text-neutral-400 hover:bg-primary-600/20 hover:text-primary-400 transition-all duration-250">
+                        <i class="fab fa-linkedin-in text-sm"></i>
+                    </a>
+                </div>
+            </div>
         </div>
-      </div>
+
+        <!-- Divider -->
+        <div class="border-t border-neutral-800 mt-16 pt-6 text-center text-sm text-neutral-600">
+            © <span class="text-neutral-400">upPlan</span> <span id="year"></span>. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Rotating Info Toast -->
+    <div id="info-toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[9999]
+       max-w-md w-[90%] sm:w-auto
+       bg-neutral-950 text-white
+       border border-primary-500
+       rounded-2xl px-6 py-4
+       shadow-soft-2xl
+       opacity-0 translate-y-6
+       transition-all duration-500 ease-out
+       pointer-events-none">
+
+        <div class="flex items-start gap-3">
+            <span class="text-primary-400 text-lg mt-1">
+                <i class="fa-solid fa-circle-info"></i>
+            </span>
+            <p id="toast-text" class="text-sm leading-relaxed text-neutral-300">
+                <!-- Message injected by JS -->
+            </p>
+        </div>
     </div>
 
-  <script>
-    // On MailerLite webform success, redirect visitors to our local thank-you page.
-    function ml_webform_success_35189939() {
-      // small delay to allow MailerLite scripts to finish and for accessibility
-      setTimeout(function() {
-        try {
-          window.location.href = 'thankyou.html';
-        } catch (e) {
-          // fallback: attempt assign
-          window.location.assign('thankyou.html');
-        }
-      }, 350);
-    }
-  </script>
-  
-      
-      <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
-        <script>
-            fetch("https://assets.mailerlite.com/jsonp/2010009/forms/175296527582889776/takel")
-        </script>
-            <!-- End MailerLite embedded form -->
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h4>Get Early Access to Calm Nerve</h4>
-        <p>Don’t miss your chance to finally get relief.</p>
-      </div>
-        <div>
-        <a href="#final-cta" class="btn btn-primary large">JOIN THE PRIORITY LIST NOW</a>
-      </div>
-    </div>
-    <p class="small muted center">© Calm Nerve — All rights reserved. Terms & Privacy apply.</p>
-  </footer>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 
-  <script src="script.js" defer></script>
-  <!-- MailerLite Universal -->
-  <script>
-    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-      .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-      n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-      (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-    ml('account', '2010009');
-  </script>
-  <!-- End MailerLite Universal -->
-  <script>
-    // Smooth-scroll and focus the email input when CTA anchors to #final-cta are clicked
-    (function(){
-      function focusEmail(){
-        var input = document.querySelector('#mlb2-35189939 input[type=email]');
-        if(input){ input.focus({preventScroll:true}); }
-      }
-      document.querySelectorAll('a[href="#final-cta"]').forEach(function(a){
-        a.addEventListener('click', function(e){
-          // default anchor behavior will jump — we smooth scroll and focus the input
-          e.preventDefault();
-          var el = document.querySelector('#final-cta');
-          if(el){ el.scrollIntoView({behavior:'smooth', block:'start'}); }
-          // focus after a short delay to allow scroll/paint
-          setTimeout(focusEmail, 400);
-        });
-      });
-    })();
-  </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/asset/js/app.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
+
 </html>
