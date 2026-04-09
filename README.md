@@ -37,6 +37,35 @@ Next recommended steps I can help with:
 - Design a bottle mockup or export transparent PNG for the product image.
 - Draft an automated 3-email welcome sequence for early access + beta testers.
 
+Deploy to Netlify ✅
+- I added `netlify.toml` and `_redirects` for an easy Netlify deploy (this site publishes from the repo root).
+- Quick deploy options:
+  1. Push this repo to GitHub, then in Netlify select **New site from Git**, pick the repo, set **build command** blank, and **publish directory** to `.`.
+  2. Or drag-and-drop the project folder onto Netlify's Sites page for an instant deploy.
+
+Netlify Forms + MailerLite forwarding (optional) 🔁
+- The site now includes a Netlify Form named `early-access` (see `index.html`) that posts to `/thankyou.html` on success.
+- I added a Netlify Function at `netlify/functions/forward-mailerlite.js` which can forward submissions to MailerLite when configured.
+- To enable forwarding, add these environment variables in your Netlify site settings (Site → Settings → Build & deploy → Environment):
+  - `NETLIFY_MAILERLITE_API_KEY` — your MailerLite API key (required to forward)
+  - `MAILERLITE_GROUP_ID` — optional MailerLite group ID to add the subscriber to
+- How it works:
+  - On the client, the form uses `navigator.sendBeacon` (or a best-effort fetch) to POST to the function endpoint `/.netlify/functions/forward-mailerlite` when the user submits the form.
+  - The form still performs a native HTML submit so **Netlify Forms** captures the entry and the browser redirects to `thankyou.html`.
+  - If the API key is not present, the function will safely log and return success (no keys are committed to the repo).
+
+Local testing 💻
+- Install the Netlify CLI: `npm install -g netlify-cli`.
+- Run locally: `netlify dev` (it will serve functions and the site at `http://localhost:8888`).
+- Set local env vars with `netlify env:set NETLIFY_MAILERLITE_API_KEY "<key>"` etc., or create a `.env` file for `netlify dev`.
+
+Security note ⚠️
+- Never commit your API keys to the repository. Use Netlify environment variables or a secret manager.
+
+If you'd like, I can also:
+- Convert the form to use a different provider (Klaviyo, MailerLite embedded), or
+- Set up Netlify outgoing form webhooks to invoke the function from Netlify's side instead of the client (optional).
+
 If you'd like, I can now:
 - Generate the Klaviyo form HTML (tell me which provider), or
 - Draft the 3-email welcome/engagement sequence, or

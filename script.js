@@ -95,3 +95,24 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+// Netlify form forwarding: use sendBeacon to call serverless function (best-effort)
+(function(){
+  var form = document.querySelector('form[name="early-access"]');
+  if(!form) return;
+  form.addEventListener('submit', function(){
+    try {
+      var data = new FormData(form);
+      var obj = {};
+      data.forEach(function(value,key){ obj[key]=value; });
+      var payload = JSON.stringify(obj);
+      var url = '/.netlify/functions/forward-mailerlite';
+      if (navigator.sendBeacon) {
+        var blob = new Blob([payload], {type: 'application/json'});
+        navigator.sendBeacon(url, blob);
+      } else {
+        fetch(url, {method:'POST', headers:{'Content-Type':'application/json'}, body: payload}).catch(function(){});
+      }
+    } catch (err) { console.warn('Forward failed', err); }
+  });
+})();
